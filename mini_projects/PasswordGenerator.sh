@@ -29,5 +29,6 @@ esac
 
 password=$(tr -dc '$charSet' < /dev/urandom | head -c $length)
 
-
 echo "Generated Password: $password"
+
+echo "$(date)"
