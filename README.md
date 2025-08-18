@@ -115,9 +115,9 @@ function greet() {
 }
 
 greet "Alice"  # Call function with argument
-
-Return values from functions using 'return' (status) or 'echo' (output).
 ```
+Return values from functions using 'return' (status) or 'echo' (output).
+
 
 ----------------------------------------
 
