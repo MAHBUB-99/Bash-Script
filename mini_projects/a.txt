@@ -1,3 +1,6 @@
-banana
-grape
-kiwi
+Hello world
+This is a test
+Bash scripting is fun
+Let's count lines
+Common line here
+Another unique line
