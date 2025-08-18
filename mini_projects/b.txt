@@ -1,4 +1,6 @@
-apple
-banana
-cherry
-grape
+Different content here
+This is a test
+Hello world
+Common line here
+Some extra text
+Unique to file2
