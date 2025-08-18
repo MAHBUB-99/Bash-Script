@@ -45,8 +45,8 @@ printf "Hello, %s. You are %d years old.\n" "$user_name" "$age"  # Formatted out
 
 4. Control Flow
 
-```bash
 If-Else:
+```bash
 
 if [[ $age -ge 18 ]]; then
   echo "Adult"
@@ -73,8 +73,8 @@ esac
 
 5. Loops
 
-```bash
 For loop:
+```bash
 
 for i in {1..5}; do
   echo "Number $i"
@@ -85,8 +85,8 @@ for file in *.sh; do
 done
 ```
 
-```bash
 While loop:
+```bash
 
 count=1
 while [[ $count -le 5 ]]; do
@@ -95,8 +95,8 @@ while [[ $count -le 5 ]]; do
 done
 ```
 
-```bash
 Until loop:
+```bash
 
 count=1
 until [[ $count -gt 5 ]]; do
@@ -115,9 +115,9 @@ function greet() {
 }
 
 greet "Alice"  # Call function with argument
-
-Return values from functions using 'return' (status) or 'echo' (output).
 ```
+Return values from functions using 'return' (status) or 'echo' (output).
+
 
 ----------------------------------------
 
@@ -125,50 +125,53 @@ Return values from functions using 'return' (status) or 'echo' (output).
 
 ```bash
 str="Hello, Bash scripting!"
-
+```
 Length:
-
+```bash
 echo "${#str}"
-
+```
 Substring extraction:
-
+```bash
 echo "${str:7:4}"         # Outputs "Bash"
-
+```
 Replace first occurrence:
-
+```bash
 echo "${str/Bash/Shell}"
-
+```
 Replace all occurrences:
-
+```bash
 echo "${str//i/I}"
-
+```
 Check if string contains substring:
-
+```bash
 if [[ "$str" == *"Bash"* ]]; then
   echo "Found Bash"
 fi
-
+```
 Trim whitespace:
-
+```bash
 trimmed="$(echo -e "$str" | sed -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//')"
 ```
 
 ----------------------------------------
 
 8. Arrays
-
 ```bash
-arr=(apple banana cherry)
 
+arr=(apple banana cherry)
+```
 Access:
+```bash
 
 echo "${arr[1]}"          # banana
-
+```
 Length:
+```bash
 
 echo "${#arr[@]}"         # 3
-
+```
 Loop over array:
+```bash
 
 for item in "${arr[@]}"; do
   echo "$item"
@@ -179,30 +182,33 @@ done
 
 9. File and Directory Handling
 
-```bash
 Test if file exists and is regular file:
+```bash
 
 if [[ -f "file.txt" ]]; then
   echo "File exists"
 fi
-
+```
 Test if directory exists:
+```bash
 
 if [[ -d "/path/to/dir" ]]; then
   echo "Directory exists"
 fi
-
+```
 Create directory:
+```bash
 
 mkdir -p /tmp/mydir
-
+```
 Copy, move, remove files:
-
+```bash
 cp source.txt destination.txt
 mv oldname.txt newname.txt
 rm -f file.txt
-
+```
 Read file line by line:
+```bash
 
 while IFS= read -r line; do
   echo "$line"
@@ -213,21 +219,27 @@ done < file.txt
 
 10. Process Management
 
-```bash
 Run command in background:
 
+```bash
 sleep 60 &
 
+```
 Get process ID of last background job:
 
+```bash
 pid=$!
 
+```
 Wait for process to finish:
 
+```bash
 wait $pid
 
+```
 Kill process by PID:
 
+```bash
 kill -9 $pid
 ```
 
@@ -235,30 +247,35 @@ kill -9 $pid
 
 11. Debugging & Error Handling
 
-```bash
 Enable debugging:
+```bash
 
 set -x
-
+```
 Disable debugging:
+```bash
 
 set +x
-
+```
 Exit script on error:
+```bash
 
 set -e
-
+```
 Trap signals for cleanup:
+```bash
 
 trap 'echo "Script interrupted."; exit 1' SIGINT SIGTERM
-
+```
 Check exit status of last command:
+```bash
 
 if [[ $? -ne 0 ]]; then
   echo "Previous command failed."
 fi
-
+```
 Logging function:
+```bash
 
 log() {
   echo "$(date +"%F %T") - $*"
